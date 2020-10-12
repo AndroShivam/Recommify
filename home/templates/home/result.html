@@ -1,0 +1,48 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+{% if playlist_link is None %}
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <form class="py-5" action="{% url 'result' %}" id = "result-form" autocomplete="off"  method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button class="btn border border-white my-2 search-btn">Create Playlist</button>
+      </form>
+    </div>
+  </div>
+{% endif %}
+
+{% if playlist_link is not None %}
+<div class="container">
+  <div class="py-3 d-flex justify-content-center">
+      <h3 class="font-weight-bold">Your playlist is ready :)</h3>
+  </div>
+  <div class="py-2 d-flex justify-content-center">
+    <a class = "btn btn-primary" href="{{ playlist_link }}">Click Here</a>
+  </div>
+</div>
+{% endif %}
+
+{% if playlist_link is not None %}
+<div class=" h-100 d-flex justify-content-center align-items-center">
+  <div>
+    <img src="https://media.giphy.com/media/bkfedFXLulc8c2ucCI/giphy.gif" alt="">
+  </div>
+</div>
+{% endif %}
+
+{% if playlist_link is not None %}
+<footer class="page-footer font-small align-items-bottom justify-content-bottom">
+  <div class="text-center py-3">Generate More Music
+    <a href="{% url 'main_home' %}">Home</a>
+  </div>
+</footer>
+{% endif %}
+
+
+{% endblock %}

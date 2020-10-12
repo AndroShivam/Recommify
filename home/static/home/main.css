@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+@font-face{
+  font-family: Gordita;
+  src: url(./GorditaRegular.woff);
+}
+body{
+    font-family: Gordita;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 400%;
+}
+
+.para {
+    font-size: 120%;
+}
+.masthead {
+    color: whitesmoke;
+    height: 100vh;
+    min-height: 500px;
+    background-image: url(./image__.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.centered{
+    position: relative;
+}
+
+.search-btn {
+    color: white;
+    background-color: black;
+}
+.search-btn :hover{
+  color: aqua;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+
+.card-bg {
+  max-width: 700px;
+  padding: 20px;
+  margin: 30px auto;
+  background-color: #FFF;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+  overflow: hidden;
+}
+
+.card-photo {
+  float: left;
+  width: 40%;
+  margin-right: 15px;
+}
+
+
+
+
+
