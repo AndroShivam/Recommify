@@ -1,7 +1,7 @@
 <h1 align="center">Recommify</h1>
 
 <p align="center">
-<img src="https://github.com/AndroShivam/Recommendify/blob/main/screenshots/recommendify.gif"/>
+<img src="https://github.com/AndroShivam/Recommify/blob/main/screenshots/recommify.gif?raw=true"/>
 </p>
 
 ## Check it out
