@@ -12,7 +12,7 @@ So that you're never out of music 🎶.<br>
 </p>
 
 ## Check it out
-- [Recommentify](https://recommentify.herokuapp.com) 
+- [Hosted Version](https://recommify.herokuapp.com) 
 
 ## Tech stack & Open-source libraries
 - [Django](https://www.djangoproject.com/) - The web framework for perfectionists with deadlines.
