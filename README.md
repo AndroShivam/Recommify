@@ -1,6 +1,13 @@
 <h1 align="center">Recommify</h1>
 
 <p align="center">
+Recommify uses Spotify Web API to recommend music to you by mixing different artists, genres and tracks.
+So that you're never out of music 🎶.<br>
+</p>
+<br>
+
+
+<p align="center">
 <img src="https://github.com/AndroShivam/Recommify/blob/main/screenshots/recommify.gif?raw=true"/>
 </p>
 
