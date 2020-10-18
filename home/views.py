@@ -65,10 +65,9 @@ def result(request):
 
      # After Authentication the url looks like this https://example.com/callback?code=NApCCg..BkWtQ&state=profile%2Factivity
      # we get the code by calling get mehod
-    if request.method == 'GET':
+    if not url:
         code = request.GET.get('code', None)
         url.append(code)
-
 
     if request.method == 'POST':
         form = ResultForm(request.POST)
