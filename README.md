@@ -1,11 +1,18 @@
 <h1 align="center">Recommify</h1>
 
 <p align="center">
-<img src="https://github.com/AndroShivam/Recommendify/blob/main/screenshots/recommendify.gif"/>
+Recommify uses Spotify Web API to recommend music to you by mixing different artists, genres and tracks.
+So that you're never out of music 🎶.<br>
+</p>
+<br>
+
+
+<p align="center">
+<img src="https://github.com/AndroShivam/Recommify/blob/main/screenshots/recommify.gif?raw=true"/>
 </p>
 
 ## Check it out
-- [Recommentify](https://recommentify.herokuapp.com) 
+- [Hosted Version](https://recommify.herokuapp.com) 
 
 ## Tech stack & Open-source libraries
 - [Django](https://www.djangoproject.com/) - The web framework for perfectionists with deadlines.
@@ -24,3 +31,6 @@
 ## Known Issues
 1. Preview_uri of 30 sec is broken (for now)
 2. url out of index bound when making two playlists one after another (sometimes)
+
+## Credits
+Image from Unsplash by [Alexander Popov](https://unsplash.com/@5tep5)
