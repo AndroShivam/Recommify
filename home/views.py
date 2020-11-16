@@ -6,8 +6,8 @@ from home.utils.utils import Utils
 from django.http import JsonResponse,HttpResponse
 
 
-client_id = "your client_id"
-client_secret = "your client_secret"
+client_id = "your client id"
+client_secret = "your client secret"
 
 spotify = SpotifyAPI(client_id, client_secret)
 
@@ -65,9 +65,7 @@ def result(request):
 
      # After Authentication the url looks like this https://example.com/callback?code=NApCCg..BkWtQ&state=profile%2Factivity
      # we get the code by calling get mehod
-    if not url:
-        code = request.GET.get('code', None)
-        url.append(code)
+
 
     if request.method == 'POST':
         form = ResultForm(request.POST)
@@ -77,10 +75,8 @@ def result(request):
             playlist_desc = form.cleaned_data['playlist_desc']
 
             # Get profile date of the current user
-            headers = spotify.user_authorization(code = url[0])
+            headers = spotify.user_authorization(code = code)
             profile_data = spotify.get_profile_data(headers = headers)
-
-            url.clear()
 
             # Get user_id to create a new playlist 
             user_id = profile_data['id']
@@ -90,6 +86,7 @@ def result(request):
             return render(request, 'home/result.html', {'form': form, 'playlist_link' : playlist_link})
 
     else:
+        code = request.GET.get('code', None)
         form = ResultForm()
     return render(request, 'home/result.html',{'form': form})
 

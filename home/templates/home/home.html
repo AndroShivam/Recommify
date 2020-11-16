@@ -11,7 +11,14 @@
     <div class="row h-100 align-items-center">
       <div class="col-md-6 text-center">
           <h1>Playlist Maker</h1>
-          <p class="para">Welcome to Playlist Maker, a web app that lets you make a Spotify Playlist by mixing your favourite artists, genres, and tracks. Seperate using "," if using multiple artists, genres, tracks </p>
+          <br>
+          <p class="para">
+            Welcome to Playlist Maker,
+            a web app that lets you make a Spotify Playlist 
+            by mixing your favourite artists, genres, and tracks. 
+            Seperate using "," (without spaces) if using multiple artists, genres, tracks.<br>
+            (* Max 5 values combination of either of these values) 
+          </p>
       </div>
       <div class="col-md-6 d-flex justify-content-center">
           <form class="form-group py-5" id="home-form" autocomplete="off"  method="POST">
@@ -33,9 +40,16 @@
 
 
 <!-- Result Cards -->
-<div id="demo">
-
+<div class="container py-5 px-5">
+    <div class="col-lg-12 d-flex justify-content-center" >
+      <div id = "result">
+        <audio id="js-player" controls>
+          <source id="js-player-source">
+        </audio>
+      </div>
+  </div>
 </div>
+  
 
 
 <!-- Save to Playlist Button -->
@@ -49,3 +63,5 @@
 
 
 {% endblock %}
+
+    

@@ -31,11 +31,14 @@ h1{
 }
 
 .search-btn {
-    color: white;
-    background-color: black;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
 }
-.search-btn :hover{
-  color: aqua;
+
+.search-btn:hover {
+  background-color: white;
+  color: black;
 }
 
 img {
@@ -43,24 +46,6 @@ img {
     height: auto;
   }
   
-
-
-.card-bg {
-  max-width: 700px;
-  padding: 20px;
-  margin: 30px auto;
-  background-color: #FFF;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
-  overflow: hidden;
-}
-
-.card-photo {
-  float: left;
-  width: 40%;
-  margin-right: 15px;
-}
-
-
 
 
 

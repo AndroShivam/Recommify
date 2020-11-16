@@ -4,7 +4,7 @@ $("#add_to_playlist_btn").hide();
 
 // Setup plyr player
 document.addEventListener('DOMContentLoaded', () => {
-    const player = Plyr.setup('.js-player');
+    const player = Plyr.setup('#js-player');
 });
 
 // Form submission
@@ -30,28 +30,28 @@ function create_post(){
         },
         success : function(result){
             $("#add_to_playlist_btn").show();
-            document.getElementById("demo").innerHTML = `
-            ${result.tracks.map(tracksTemplate).join('')}
-            `
+            document.getElementById("result").innerHTML = `${result.tracks.map(tracksTemplate).join('')}`
         }
     }); 
 }
 
-// Javascript template literals
+
+// Javascript template literals to show result cards
 function tracksTemplate(track){
     return `
-    <div class = "card-bg">
-        <img class = "card-photo" src = "${track.album.images[0].url}"> 
-        <h3 class = "font-weight-bold">${ track.name }</h3>
-        <p>${ track.artists[0].name }</p>
-        <p class = "text-muted"><small>Released On : ${ track.album.release_date }</small></p>
-        ${track.preview_url ? `
-        <audio class="js-player">
-            <source src="${ track.preview_url }" type="audio/mp3">
-        </audio>
-        ` : `
-        <p class = "text-muted" >Audio not available</p>
-        `}
+    <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src = ${track.album.images[0].url} class="card-img" alt="Error loading image">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold">${ track.name }</h5>
+          <p class="card-text">${ track.artists[0].name }</p>
+          <p class="card-text"><small>Released On : ${ track.album.release_date }</small></p>
+        </div>
+      </div>
     </div>
-      `
+  </div>
+  `
 }

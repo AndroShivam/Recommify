@@ -108,11 +108,6 @@ class SpotifyAPI(object):
 		# Tokens are Returned to Application
 		response_data = json.loads(post_request.text)
 
-		print('this is code')
-		print(code)
-		print('this is response data')
-		print(response_data)
-
 		self.current_user_access_token = response_data["access_token"]
 		refresh_token = response_data["refresh_token"]
 		token_type = response_data["token_type"]
@@ -128,8 +123,6 @@ class SpotifyAPI(object):
 		return authorization_header
 
 
-	
-	
 	# URL for user Authentication
 	def get_auth_url(self):
 		query_params = {
