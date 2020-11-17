@@ -20,7 +20,7 @@ h1{
     color: whitesmoke;
     height: 100vh;
     min-height: 500px;
-    background-image: url(./image__.png);
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(./image__.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
