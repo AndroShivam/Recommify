@@ -29,7 +29,7 @@ So that you're never out of music 🎶.<br>
 6. Enjoy!
 
 ## Known Issues
-1. Preview_uri of 30 sec is broken (for now)
+1. Preview_url of 30 sec is broken (for now)
 
 ## Credits
 Image from Unsplash by [Alexander Popov](https://unsplash.com/@5tep5)
