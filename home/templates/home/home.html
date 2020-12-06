@@ -5,33 +5,35 @@
 {% block content %}
 
 
- <!-- Header  -->
-<header class="masthead">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-md-6 text-center">
-          <h1>Playlist Maker</h1>
-          <br>
-          <p class="para">
-            Welcome to Playlist Maker,
-            a web app that lets you make a Spotify Playlist 
-            by mixing your favourite artists, genres, and tracks. 
-            Seperate using "," (without spaces) if using multiple artists, genres, tracks.<br>
-            (* Max 5 values combination of either of these values) 
-          </p>
-      </div>
-      <div class="col-md-6 d-flex justify-content-center">
-          <form class="form-group py-5" id="home-form" autocomplete="off"  method="POST">
-              {% csrf_token %}
-              {{ form|crispy}}
-              <button class="btn border border-white my-2 search-btn">Mix it up</button>
-          </form>
-      </div>
-    </div>
+<div class="main-sec">
+  <div class="container">
+   <div class="row">
+     <div class="col">
+       <div class="text-wrapper">
+         <h1>RECOMMIFY</h1>
+         <p>
+          Welcome to Playlist Maker,
+          a web app that lets you make a Spotify Playlist 
+          by mixing your favourite artists, genres, and tracks. 
+          Seperate using "," (without spaces) if using multiple artists, genres, tracks.<br>
+          (* Max 5 values combination of either of these values) 
+         </p>
+       </div>
+     </div>
+
+     <div class="col">
+       <div class="form-wrapper">
+         <form class="form-group py-5" id="home-form" autocomplete="off"  method="POST">
+           {% csrf_token %}
+           {{ form|crispy}}
+           <button class="form-btn">Mix it up</button>
+         </form>
+       </div>
+     </div>
+   </div>
   </div>
-</header>
-
-
+</div>
+    
 
 <!-- Loading Gif -->
 <div class="d-flex justify-content-center">
